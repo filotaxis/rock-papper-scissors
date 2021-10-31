@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "pokemon";
+    src: url("fonts/PKMN\ RBYGSC.ttf") format("truetype");
+}
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'pokemon', sans-serif;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 22rem;
+}
+
+.battle-screen {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.battle {
+    width: 30rem;
+    height: 20rem;
+    /* background-color: red; */
+}
+
+.oponent-display {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.oponent-display>div>img {
+    width: 8rem;
+    height: 8rem;
+    padding: 0;
+    /* margin: 0.8rem; */
+    image-rendering: pixelated;
+}
+
+.player-display {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-display>div>img {
+    width: 8rem;
+    height: 8rem;
+    padding: 0;
+    image-rendering: pixelated;
+}
+
+.stocks:nth-child(1){
+    border-bottom: 4px solid #000;
+    border-left: 2px solid #000;
+}
+
+.message-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29.2rem;
+    height: 5.8rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 28.5rem;
+    border: 2px solid #000;
+    border-top: 4px solid #000;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+}
+
+.message>p {
+    height: 4rem;
+    width: 28rem;
+    font-size: 1.2rem;
+}

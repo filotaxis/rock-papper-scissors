@@ -1,3 +1,7 @@
+const playerDisplay = document.querySelector(".player>img");
+const oponentDisplay = document.querySelector(".oponent>img");
+const textDisplay = document.querySelector(".message>p");
+const initialText = "bryan trainer wants to battle with you";
 class Player{
     constructor(choice) {
         this.choice = choice
@@ -10,7 +14,9 @@ class Player{
     get choice() {
         return this.choice;
     }
+
 }
+
 
 const choices = ["bulbasaur", "charmander", "squirtle"];
 
@@ -21,9 +27,13 @@ buttons.forEach(button => {
         const computer = Math.floor(Math.random() * 3);
         console.log(`${choices[human]} - ${choices[computer]}`);
         rules(human, computer);
+        oponentDisplay.src = `images/${choices[computer]}_front.png`; 
+        playerDisplay.src = `images/${choices[human]}_back.png`;
     });
+    
     }
 );
+
 
 
 const rules = (a, b) => {
