@@ -1,7 +1,9 @@
 const playerDisplay = document.querySelector(".player>img");
 const oponentDisplay = document.querySelector(".oponent>img");
 const textDisplay = document.querySelector(".message>p");
-const initialText = "bryan trainer wants to battle with you";
+const stocksOponent = document.querySelector(".stocks-oponent");
+const stocksPlayer = document.querySelector(".stocks-player");
+
 class Player{
     constructor(choice) {
         this.choice = choice
@@ -19,16 +21,18 @@ class Player{
 
 
 const choices = ["bulbasaur", "charmander", "squirtle"];
+const choicesType = ["grass", "fire", "water"];
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const human = parseInt(button.getAttribute("data-id"));   
         const computer = Math.floor(Math.random() * 3);
-        console.log(`${choices[human]} - ${choices[computer]}`);
-        rules(human, computer);
+        // console.log(`${choices[human]} - ${choices[computer]}`);
         oponentDisplay.src = `images/${choices[computer]}_front.png`; 
         playerDisplay.src = `images/${choices[human]}_back.png`;
+        rules(human, computer);
+        
     });
     
     }
@@ -37,16 +41,21 @@ buttons.forEach(button => {
 
 
 const rules = (a, b) => {
+    const pokeball = document.createElement("img");
+    pokeball.src = "images/pokeball.png";
+    
     if (a === b) {
-        console.log("tie");
+        textDisplay.textContent = "it's a TIE!";
     }
     else if((a === 0 && b === 1) ||
             (a === 1 && b === 2) || 
             (a === 2 && b === 0)) {
-        console.log("computer wins");
+        textDisplay.innerHTML = `OPONENT WINS! \r\n <img src="images/${choicesType[b]}.png"> type beats <img src="images/${choicesType[a]}.png"> type.`;
+        stocksOponent.appendChild(pokeball);
     }
     else {
-        console.log("human wins");
+        textDisplay.innerHTML = `YOU WIN! \r\n <img src="images/${choicesType[a]}.png"> type beats <img src="images/${choicesType[b]}.png"> type.`;
+        stocksPlayer.appendChild(pokeball);
     }
 }
 
