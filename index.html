@@ -7,9 +7,14 @@
     <title>Rock Papper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <h1>Hola</h1>
+    <div class="app-title">
+        <p>PokeRock-Papper-Scissors (Bo3)</p>
+    </div>
     <div class="display">
         <div class="battle-screen">
             <div class="battle">
@@ -20,12 +25,12 @@
                         </div>
                     </div>
                     <div class="oponent">
-                        <img src="images/red.png" alt="bulbasaur front">
+                        <img src="images/red.png">
                     </div>
                 </div>
                 <div class="player-display">
                     <div class="player">
-                        <img src="images/yellow.png" alt="bulbasaur back">
+                        <img src="images/yellow.png">
                     </div>
                 <div>
                         <div class="stocks-player">
@@ -40,18 +45,29 @@
             </div>
         </div>
     </div>
+
+    <div class="winner-display"></div>
+    
+    <div class="play-again">
+        <button>Play again</button>
+    </div>
+    
+
     <div class="choose">
         <button class="bulbasaur" data-id="0">
-            <span>Bulbasaur</span>
+            <span>Chikorita</span>
         </button>
         <button class="charmander" data-id="1">
-            <span>Charmander</span>
+            <span>Cyndaquill</span>
         </button>
         <button class="squirtle" data-id="2">
-            <span>Squirtle</span>
+            <span>Totodile</span>
         </button>
     </div>
 
-    <footer>Made with <img src="images/pokeball.png" alt=""> by <a href="">Bryan</a> | <a href="">Source Code</a></footer>
+
+
+
+    <footer>Made with <img src="images/pokeball.png" alt=""> by <a href="https://github.com/filotaxis"> Bryan </a> | <a href="https://filotaxis.github.io/rock-papper-scissors/"> Source Code </a></footer>
 </body>
 </html>

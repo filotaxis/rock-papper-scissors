@@ -9,12 +9,36 @@ html {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: sans-serif;
+    font-family: 'Monoton',
+    cursive;
+    font-family: 'Montserrat',
+    sans-serif;
+    background-color: #583e52;
+
 }
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    align-items: center;
+}
+
+.app-title>p{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e7ebc5;
+}
+
+
 
 .display {
     display: flex;
@@ -26,6 +50,26 @@ html {
         sans-serif;
 
 }
+
+.winner-display {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30rem;
+    height: 23.4rem;
+    font-family: 'pokemon', sans-serif;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+
+}
+
+.winner-display>img {
+    width: 9rem;
+    image-rendering: pixelated;
+}
+
 
 .battle-screen {
     width: 100%;
@@ -41,7 +85,6 @@ html {
 .battle {
     width: 30rem;
     height: 17rem;
-    /* border: 2px solid red; */
 }
 
 .oponent-display {
@@ -127,17 +170,14 @@ html {
     justify-content: center;
     align-items: center;
     width: 29.2rem;
-    /* height: 5.8rem; */
     border: 2px solid #000;
     border-radius: 0.5rem;
-    /* margin: 1rem; */
 }
 
 .message {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 5rem; */
     width: 28.5rem;
     height: auto;
     border: 2px solid #000;
@@ -157,59 +197,89 @@ html {
     display: flex;
     width: 30rem;
     height: 3rem;
-    border: 2px solid red;
     gap: 1rem;
 }
+
+.play-again {
+    display: none;
+}
+
 
 button {
     background-color: #EEE;
     border: 2px solid #000;
     border-radius: 0.5rem;
-    /* padding: 1rem 2rem; */
     font-family: 'pokemon', sans-serif;
     font-weight: 700;
     flex: 1;
 }
 
-button:nth-child(1) {
+.play-again>button {
+    padding: 1rem 2rem;
+    background-color: #e4d88b;
+
+}
+
+.play-again>button:hover {
+    background-color: #dcc526;
+}
+
+.bulbasaur {
     background-color: #a0fc9b;
 }
 
-button:hover:nth-child(1) span {
+.bulbasaur:hover span {
     display: none;
 }
 
-button:hover:nth-child(1):before {
-    content: "▶ Bulbasaur";
+.bulbasaur:hover:before {
+    content: "▶ Chikorita";
 }
 
-button:nth-child(2) {
+.charmander {
     background-color: #fdba98;
 }
 
-button:hover:nth-child(2) span {
+.charmander:hover span {
     display: none;
 }
 
-button:hover:nth-child(2):before {
-    content: "▶ Charmander";
+.charmander:hover:before {
+    content: "▶ Cyndaquill";
 }
 
-button:nth-child(3) {
+.squirtle {
     background-color: #9fc1fc;
 }
 
-button:hover:nth-child(3) span {
+.squirtle:hover span {
     display: none;
 }
 
-button:hover:nth-child(3):before {
-    content: "▶ Squirtle";
+.squirtle:hover:before {
+    content: "▶ Totodile";
 }
 
-
-
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: brown;
+    background-color: #d2cdd3;
+    font-size: 1.4rem;
+    gap: 0.3rem;
+    font-weight: 700;
+}
+
+footer>img{
+    width: 1.4rem;
+}
+
+footer>a{
+    text-decoration: none;
+    color: #912f56;
+}
+
+footer>a:hover {
+    color: #23967f;
 }
